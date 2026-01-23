@@ -1,0 +1,42 @@
+name: Deploy to Production
+
+# Trigger: This workflow runs only when code is pushed (merged) to 'dev-test'
+on:
+  push:
+    branches:
+      - dev-test
+  # Allows you to run this workflow manually from the Actions tab for testing
+  workflow_dispatch:
+
+jobs:
+  deploy-salesforce:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the code from the repository
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      # 2. Install the Salesforce CLI (sf)
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli
+          sf --version
+
+      # 3. Authenticate to the Prod Org using the Secret we stored
+      - name: Authenticate to Prod
+        run: |
+          # Create a text file with the auth URL
+          echo "${{ secrets.SFDX_AUTH_URL_PROD }}" > ./auth_file.txt
+          # Authenticate using the file
+          sf org login sfdx-url --sfdx-url-file ./auth_file.txt --set-default --alias ProdOrg
+          # Clean up the sensitive file
+          rm ./auth_file.txt
+
+      # 4. Deploy the Code
+      # We deploy the 'force-app' directory. 
+      # We verify the deployment first, then deploy.
+      - name: Deploy to Prod Org
+        run: |
+          echo "Starting Deployment..."
+          sf project deploy start --source-dir force-app --target-org ProdOrg --wait 10
