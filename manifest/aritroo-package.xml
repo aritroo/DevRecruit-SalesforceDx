@@ -1,5 +1,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
+    
+    <!-- Dev-rec - 1 -->
+    <!-- <types>
         <members>Application__c.Account__c</members>
         <members>Application__c.Applicant_Name__c</members>
         <members>Application__c.Email__c</members>
@@ -21,6 +23,12 @@
         <members>Application__c-Application Layout</members>
         <members>PersonAccount-Person Account Layout</members>
         <name>Layout</name>
+    </types> -->
+
+    <!-- CI/CD Test -->
+    <types>
+        <members>testCMP</members>
+        <name>LightningComponentBundle</name>
     </types>
 
     <version>65.0</version>
