@@ -39,4 +39,4 @@ jobs:
       - name: Deploy to Prod Org
         run: |
           echo "Starting Deployment..."
-          sf project deploy start --source-dir force-app --target-org ProdOrg --wait 10
+          sf project deploy start --manifest manifest/aritroo-package.xml --target-org ProdOrg --wait 10
