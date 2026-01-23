@@ -2,7 +2,7 @@
     
     <!-- Dev-rec - 1 -->
 
-    <types>
+    <!-- <types>
         <members>Application__c</members>
         <name>CustomObject</name>
     </types>
@@ -29,13 +29,18 @@
         <members>Application__c-Application Layout</members>
         <members>PersonAccount-Person Account Layout</members>
         <name>Layout</name>
-    </types>
+    </types> -->
 
     <!-- CI/CD Test -->
-    <types>
+    <!-- <types>
         <members>testCMP</members>
         <name>LightningComponentBundle</name>
-    </types>
+    </types> -->
+
+
+    <!-- Continue from here -->
+
+    
 
     <version>65.0</version>
 </Package>
