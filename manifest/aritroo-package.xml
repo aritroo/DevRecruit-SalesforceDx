@@ -40,7 +40,18 @@
 
     <!-- Continue from here -->
 
-    
+    <types>
+        <members>Candidate_Assessment__c</members>
+        <name>CustomObject</name>
+    </types>
+
+
+    <types>
+        <members>Application__c.Candidate_Account__c</members>
+        <members>Application__c.Candidate_Contact__c</members>
+        <members>Application__c.Application_Stage__c</members>        
+        <name>CustomField</name>
+    </types>
 
     <version>65.0</version>
 </Package>
