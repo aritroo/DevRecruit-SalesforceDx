@@ -40,7 +40,7 @@
 
     <!-- Continue from here -->
 
-    <types>
+    <!-- <types>
         <members>Candidate_Assessment__c</members>
         <name>CustomObject</name>
     </types>
@@ -51,6 +51,11 @@
         <members>Application__c.Candidate_Contact__c</members>
         <members>Application__c.Application_Stage__c</members>        
         <name>CustomField</name>
+    </types> -->
+
+    <types>
+        <members>Candidate_Assessment_Record_Page</members>
+        <name>FlexiPage</name>
     </types>
 
     <version>65.0</version>
