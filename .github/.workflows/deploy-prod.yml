@@ -1,0 +1,58 @@
+name: Deploy Merged PR to Production
+
+on:
+  push:
+    branches:
+      - DevTest-Branch # Triggers when code is merged INTO UAT
+
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the code (fetch-depth: 0 is required for git diff to work)
+      - name: 'Checkout source code'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Install Salesforce CLI (Modern 'sf' version)
+      - name: 'Install Salesforce CLI'
+        run: |
+          npm install -g @salesforce/cli
+          sf --version
+
+      # 3. Install sfdx-git-delta plugin
+      - name: 'Install sfdx-git-delta'
+        run: |
+          echo y | sf plugins install sfdx-git-delta
+
+      # 4. Authenticate to Production using JWT
+      # Note: SFDX_HUB_ORG_ID should be the 'Deployment User' username
+      - name: 'Authenticate to Salesforce'
+        run: |
+          echo "${{ secrets.SFDX_JWT_KEY }}" > server.key
+          sf org login jwt \
+            --client-id ${{ secrets.SFDX_CONSUMER_KEY }} \
+            --jwt-key-file server.key \
+            --username ${{ secrets.SFDX_HUB_ORG_ID }} \
+            --instance-url https://login.salesforce.com \
+            --alias prod \
+            --set-default
+
+      # 5. Generate Delta (The components present in the merged PR)
+      # Comparing HEAD (current UAT state) with HEAD~1 (state before the merge)
+      - name: 'Create delta packages'
+        run: |
+          mkdir delta
+          sf sgd source delta --to HEAD --from HEAD~1 --output delta/ --ignore .sgdignore
+
+      # 6. Deploy to Production
+      # This deploys changed metadata AND handles destructive changes (deletions)
+      - name: 'Deploy delta to Production'
+        run: |
+          sf project deploy start \
+            --manifest delta/package/package.xml \
+            --post-destructive-changes delta/destructiveChanges/destructiveChanges.xml \
+            --target-org prod \
+            --wait 20 \
+            --test-level RunLocalTests

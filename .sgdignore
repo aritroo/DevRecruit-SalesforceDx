@@ -1,0 +1,5 @@
+# .sgdignore - Files to ignore during delta generation
+package.xml
+**/workflows/*.yml
+.gitignore
+.sgdignore
