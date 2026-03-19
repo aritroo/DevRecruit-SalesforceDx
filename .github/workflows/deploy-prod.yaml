@@ -11,6 +11,8 @@ on:
       
 jobs:
   deploy-production:
+    # Logic: Run if it's a direct push OR if it's a merged PR
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
       # 1. Checkout the code (fetch-depth: 0 is required for git diff to work)
