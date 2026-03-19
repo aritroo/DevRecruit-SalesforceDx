@@ -3,8 +3,12 @@ name: Deploy Merged PR to Production
 on:
   push:
     branches:
-      - DevTest-Branch # Triggers when code is merged INTO UAT
-
+      - DevTest-Branch        # Triggers when code is pushed directly to UAT
+  pull_request:
+    branches:
+      - DevTest-Branch        # Triggers when a PR is aimed at UAT
+    types: [closed]
+      
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
