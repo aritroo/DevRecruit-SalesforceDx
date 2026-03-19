@@ -27,6 +27,10 @@ node_modules/
 #Auth config
 auth.json
 
+#Certificates
+server.crt 
+server.key
+
 # ApexPMD cache
 .pmdCache
 
