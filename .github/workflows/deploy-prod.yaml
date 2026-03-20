@@ -3,16 +3,14 @@ name: Deploy Merged PR to Production
 on:
   push:
     branches:
-      - DevTest-Branch        # Triggers when code is pushed directly to UAT
+      - DevTest-Branch
   pull_request:
-    branches:
-      - DevTest-Branch        # Triggers when a PR is aimed at UAT
     types: [closed]
       
 jobs:
   deploy-production:
-    # Logic: Run if it's a direct push OR if it's a merged PR
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    # Logic: Run if it's a direct push OR if it's a merged PR only on DevTest-Branch
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/DevTest-Branch') || (github.event_name == 'pull_request' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'DevTest-Branch')
     runs-on: ubuntu-latest
     steps:
       # 1. Checkout the code (fetch-depth: 0 is required for git diff to work)
