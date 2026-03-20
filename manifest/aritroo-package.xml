@@ -80,7 +80,7 @@
         <name>ListView</name>
     </types> -->
 
-    <types>
+    <!-- <types>
         <members>Case.Status</members>
         <name>CustomField</name>
     </types>
@@ -88,6 +88,14 @@
     <types>
         <members>CaseStatus</members>
         <name>StandardValueSet</name>
+    </types> -->
+
+    <!-- HOXFIX Candidate_APP -->
+
+    <types>
+        <members>Application__c.Application_Status__c</members>
+        <members>Candidate_Assessment__c.Candidate__c</members>        
+        <name>CustomField</name>
     </types>
 
     <version>65.0</version>
