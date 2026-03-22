@@ -92,10 +92,17 @@
 
     <!-- HOXFIX Candidate_APP -->
 
-    <types>
+    <!-- <types>
         <members>Application__c.Application_Status__c</members>
         <members>Candidate_Assessment__c.Candidate__c</members>        
         <name>CustomField</name>
+    </types> -->
+
+    <!-- DevRec-2 -->
+
+    <types>
+        <members>DevRecruit</members>
+        <name>CustomApplication</name>
     </types>
 
     <version>65.0</version>
