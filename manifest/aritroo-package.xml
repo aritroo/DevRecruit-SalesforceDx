@@ -105,5 +105,10 @@
         <name>CustomApplication</name>
     </types>
 
+    <types>
+        <members>DevRecruit_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+
     <version>65.0</version>
 </Package>
