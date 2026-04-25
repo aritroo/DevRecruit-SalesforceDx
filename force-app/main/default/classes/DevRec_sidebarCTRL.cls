@@ -27,13 +27,6 @@ public class DevRec_sidebarCTRL {
         
         try{
             
-            /* NavigationLinkSet navSet = [SELECT Id, MasterLabel FROM NavigationLinkSet 
-                                        WHERE MasterLabel = 'DevRec_CustomNavigation' WITH SECURITY_ENFORCED LIMIT 1]; */
-            /* 
-            SELECT Id, Label, Target, Position, NavigationLinkSet.NetworkId, NavigationLinkSet.DeveloperName,  
-                Status FROM NavigationMenuItem
-                                              WHERE NavigationLinkSetId = '0LmdL000001iomvSAA' ORDER BY Position ASC */
-            
             List<NavigationMenuItem> items = [SELECT Id, Label, Target, Position FROM NavigationMenuItem
                                               WHERE NavigationLinkSet.NetworkId =:communityId 
                                               AND NavigationLinkSet.DeveloperName =:menuName AND Status ='Live' 
