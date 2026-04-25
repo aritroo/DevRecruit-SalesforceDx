@@ -18,9 +18,26 @@ private class DevRec_sidebarCTRLTest {
     @IsTest
     static void testGetMenuItems() {
 
+        // Fetch real network
+        Network nw = [
+            SELECT Id, Name
+            FROM Network
+            LIMIT 1
+        ];
+
+        // Fetch real Navigation Link Set
+        NavigationLinkSet nav = [
+            SELECT Id, DeveloperName, NetworkId
+            FROM NavigationLinkSet
+            WHERE NetworkId = :nw.Id
+            LIMIT 1
+        ];
+
         Test.startTest();
+
         List<DevRec_sidebarCTRL.MenuWrapper> results =
-            DevRec_sidebarCTRL.getMenuItems();
+            DevRec_sidebarCTRL.getMenuItems(nav.DeveloperName, nw.Id);
+
         Test.stopTest();
 
         System.assertNotEquals(null, results);
@@ -39,11 +56,10 @@ private class DevRec_sidebarCTRLTest {
         Test.startTest();
 
         try{
-            // If menu does not exist, this hits catch block
-            List<DevRec_sidebarCTRL.MenuWrapper> results =
-                DevRec_sidebarCTRL.getMenuItems();
+            DevRec_sidebarCTRL.getMenuItems('WrongMenu', 'WrongId');
+            System.assert(true);
 
-        } catch (Exception e){
+        } catch(Exception e){
             System.assert(
                 e.getMessage().contains('Unable to load navigation menu')
             );
