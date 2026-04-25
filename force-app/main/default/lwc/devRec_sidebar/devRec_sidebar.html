@@ -1,0 +1,15 @@
+<template>
+    <div class="menu">
+        <template for:each={menuItems} for:item="item">
+            <div key={item.target} class={item.cssClass} data-target={item.target}
+                onclick={navigate}>
+
+                <template if:true={item.iconUrl}>
+                    <img src={item.iconUrl} class="icon" alt={item.label}/>
+                </template>
+                
+                <span>{item.label}</span>
+            </div>
+        </template>
+    </div>
+</template>

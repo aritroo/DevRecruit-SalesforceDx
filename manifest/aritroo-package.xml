@@ -100,7 +100,7 @@
 
     <!-- DevRec-2 -->
 
-    <types>
+    <!-- <types>
         <members>DevRecruit</members>
         <name>CustomApplication</name>
     </types>
@@ -108,7 +108,53 @@
     <types>
         <members>DevRecruit_UtilityBar</members>
         <name>FlexiPage</name>
-    </types>
+    </types> -->
 
+	<types>
+		<members>DevRec_sidebarCTRL</members>
+		<members>DevRec_sidebarCTRLTest</members>
+		<name>ApexClass</name>
+	</types>
+
+	<types>
+		<members>DRCustomThemeLayout</members>
+		<name>AuraDefinitionBundle</name>
+	</types>
+	
+	<types>
+		<members>DR_NavLogoUrl</members>
+		<members>UHeader_Avatar_URL</members>
+		<members>UHeader_Help_URL</members>
+		<members>UHeader_Notification_URL</members>
+		<members>UHeader_Setup_URL</members>
+		<name>CustomLabel</name>
+	</types>
+
+	<types>
+		<members>devRec_UniversalHeader</members>
+		<members>devRec_pageHeader</members>
+		<members>devRec_sidebar</members>
+		<name>LightningComponentBundle</name>
+	</types>
+
+	<types>
+		<members>DevRec CandidateUser</members>
+		<name>Profile</name>
+	</types>
+
+	<types>
+		<members>DRSite_Favicon</members>
+		<members>UHeader_Avatar</members>
+		<members>UHeader_Help</members>
+		<members>UHeader_Notification</members>
+		<members>UHeader_Setup</members>
+		<members>devRec_Logo</members>
+		<members>sidebar_briefcase</members>
+		<members>sidebar_circle</members>
+		<members>sidebar_clipboard</members>
+		<members>sidebar_dashboard</members>
+		<name>StaticResource</name>
+	</types>
+	
     <version>65.0</version>
 </Package>

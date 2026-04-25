@@ -1,0 +1,3 @@
+<design:component label="Custom Theme Layout">
+       <design:attribute name="menuName" label="Navigation Menu Name" description="Navigation Link Set name" />
+</design:component>

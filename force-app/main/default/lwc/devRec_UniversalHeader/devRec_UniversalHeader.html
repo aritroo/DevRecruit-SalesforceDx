@@ -1,0 +1,31 @@
+<template>
+    <header class="navbar">
+        <!-- Left -->
+        <div class="nav-left">
+            <img class="brand-icon" src={logoUrl} alt="Logo" />
+            <h1 class="logo">DevRecruit</h1>
+        </div>
+
+        <!-- Center -->
+        <div class="nav-center">
+            <div class="search-wrapper">
+                <lightning-icon icon-name="utility:search" size="x-small" alternative-text="Search" class="search-icon">
+                </lightning-icon>
+
+                <input
+            type="text"
+            class="search-box"
+            placeholder="Search jobs, applications...."
+        />
+            </div>
+        </div>
+
+        <!-- Right -->
+        <div class="nav-right">
+            <img class="icon-img" src={notificationUrl} alt="Notifications" />
+            <img class="icon-img" src={helpUrl} alt="Help" />
+            <img class="icon-img" src={setupUrl} alt="Settings" />
+            <img class="avatar-img" src={avatarUrl} alt="Profile" />
+        </div>
+    </header>
+</template>
