@@ -1,0 +1,70 @@
+{
+  "appPageId" : "1537e8c7-dab2-4ff1-8746-e77fb51bc51b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "523cba1f-9844-4a23-a98e-fcad79b3904a",
+  "label" : "Job Listing",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "70a56abc-9aa5-480f-8955-a397861bdf17",
+          "columns" : [ {
+            "UUID" : "14590328-f726-4cf3-ad88-6c0ed4f80162",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "70a56abc-9aa5-480f-8955-a397861bdf17",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center\"> JOB Listing page </h1>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "88d8a2f7-06d8-4210-9b02-ac87abbb7e5e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "14590328-f726-4cf3-ad88-6c0ed4f80162",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "859ea61c-7be2-4de9-9421-027439c45ee5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Job Listing"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "52d6b517-6bd6-47e5-9948-c2ac35038d5a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b6c06b98-24f2-4d65-b68a-990d29039699",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "6Dp9iwiSTJdHbfsFNsX4r0vzuuditm",
+  "type" : "view",
+  "viewType" : "custom-job-listing"
+}
