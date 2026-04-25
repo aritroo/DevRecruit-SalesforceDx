@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "523cba1f-9844-4a23-a98e-fcad79b3904a",
+  "appPageId" : "1537e8c7-dab2-4ff1-8746-e77fb51bc51b",
+  "configurationTags" : [ ],
+  "devName" : "Job_Listing__c",
+  "id" : "10c1d25b-15b2-4002-98b1-5ad8ba2f65ea",
+  "label" : "Job Listing",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-job-listing",
+  "type" : "route",
+  "urlPrefix" : "job-listing"
+}
