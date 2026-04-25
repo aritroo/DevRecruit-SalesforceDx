@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    background-color: white;
+    padding: 15px;
+    font-size: 24px;
+    border-bottom: 1px solid #afafaf;
+}
