@@ -100,7 +100,7 @@
 
     <!-- DevRec-2 -->
 
-    <!-- <types>
+    <types>
         <members>DevRecruit</members>
         <name>CustomApplication</name>
     </types>
@@ -108,14 +108,7 @@
     <types>
         <members>DevRecruit_UtilityBar</members>
         <name>FlexiPage</name>
-    </types> -->
-
-    <!-- Experience Bundle -->
-	<types>
-		<members>DevRec_CandidatePortal1</members>
-		<name>ExperienceBundle</name>
-	</types>
-	
+    </types>
 
     <version>65.0</version>
 </Package>
