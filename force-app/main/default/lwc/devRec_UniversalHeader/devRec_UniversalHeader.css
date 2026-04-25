@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:host {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+}
+
+/* Main Header */
+.navbar {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;    
+}
+
+/* Left Section */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 220px;
+}
+
+.brand-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 22px;    
+}
+
+/* Center Search */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 24px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    --slds-c-icon-color-foreground-default: #5f5f5f;
+    z-index: 2;
+}
+
+.search-box {
+    width: 75%;
+    height: 34px;
+    border: 1.5px solid #6f6f6f;
+    border-radius: 24px;
+    padding: 0 18px 0 42px;
+    font-size: 15px;
+    color: #222;
+    background: #ffffff;
+    outline: none;
+}
+
+.search-box::placeholder {
+    color: #666;
+    font-size: 15px;
+}
+
+.search-box:focus {
+    border-color: #0176d3;
+    box-shadow: 0 0 0 1px #0176d3;
+}
+
+/* Right Section */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 220px;
+    justify-content: flex-end;
+    padding-right: 6px;
+}
+
+.icon-img {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-img:hover {
+    opacity: 1;
+    /* transform: scale(1.08); */
+}
+
+.avatar-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.avatar-img:hover {
+    transform: scale(1.08);
+}

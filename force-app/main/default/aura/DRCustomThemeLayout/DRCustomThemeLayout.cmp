@@ -1,0 +1,39 @@
+<aura:component implements="forceCommunity:themeLayout" access="global">
+
+    <aura:attribute name="menuName" type="String" />
+
+    <div class="layout">
+
+        <!-- Top Header -->
+        <header class="header">
+            <c:devRec_UniversalHeader />
+        </header>
+
+        <!-- Main Body -->
+        <div class="body">
+
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <c:devRec_sidebar menuName = "{!v.menuName}" />
+            </aside>
+
+            <!-- Right Section -->
+            <div class="main">
+
+                <!-- Page Header -->
+                <div class="pageHeader">
+                    <c:devRec_pageHeader />
+                </div>
+
+                <!-- Dynamic Page Content -->
+                <div class="content">
+                    {!v.body}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</aura:component>
