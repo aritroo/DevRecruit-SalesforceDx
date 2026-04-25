@@ -115,6 +115,20 @@
 		<members>DevRec_CandidatePortal1</members>
 		<name>ExperienceBundle</name>
 	</types>
+
+    <types>
+        <members>DevRec_CandidatePortal1</members>
+        <name>SiteDotCom</name>
+    </types>
+
+    <types>
+        <members>DevRec_CandidatePortal</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>cbDevRec_CandidatePortal</members>
+        <name>NetworkBranding</name>
+    </types>
 	
 
     <version>65.0</version>
