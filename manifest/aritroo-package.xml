@@ -110,7 +110,7 @@
         <name>FlexiPage</name>
     </types> -->
 
-	<types>
+	<!-- <types>
 		<members>DevRec_sidebarCTRL</members>
 		<members>DevRec_sidebarCTRLTest</members>
 		<name>ApexClass</name>
@@ -154,7 +154,31 @@
 		<members>sidebar_clipboard</members>
 		<members>sidebar_dashboard</members>
 		<name>StaticResource</name>
-	</types>
+	</types> -->
+
+    <types>
+        <members>devRec_login</members>
+        <name>LightningComponentBundle</name>
+    </types>
+
+    <types>
+        <members>DRLoginWrapper</members>
+        <members>dRCustomLoginCMP</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
 	
+    <types>
+        <members>DevRec_CDMT.Login_MDT</members>
+        <name>CustomMetadata</name>
+    </types>
+
+    <types>
+		<members>DRLoginWrapper_CTRL</members>
+		<members>DRLoginWrapper_CTRL_TEST</members>
+		<members>dRCustomLoginCMP_CTRL</members>
+		<members>dRCustomLoginCMP_CTRL_TEST</members>
+		<name>ApexClass</name>
+	</types>
+
     <version>65.0</version>
 </Package>

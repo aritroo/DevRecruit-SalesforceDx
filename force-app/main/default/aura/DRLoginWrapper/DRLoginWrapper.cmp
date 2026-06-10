@@ -1,0 +1,7 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="DRLoginWrapper_CTRL">
+
+    <aura:attribute name="startUrl" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <c:devRec_login aura:id="loginForm" onuserlogin="{!c.handleLogin}" />
+</aura:component>

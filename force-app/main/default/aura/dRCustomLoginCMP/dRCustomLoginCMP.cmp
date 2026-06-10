@@ -1,0 +1,9 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" controller="dRCustomLoginCMP_CTRL">
+
+    <aura:attribute name="bgUrl" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="layout" style="{!'background-image:url(' + v.bgUrl + ')'}">          
+        <div class="content"> {!v.body} </div>
+    </div>
+</aura:component>

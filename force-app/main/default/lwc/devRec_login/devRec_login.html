@@ -1,0 +1,36 @@
+<template>
+
+    <div class="login-wrapper">
+        
+        <div class="login-card">
+            
+            <div class="login-header">
+                <h1>Welcome Back</h1>
+                <p>Sign in to continue</p>
+            </div>
+
+            <!-- Email -->
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" value={email} onchange={handleEmailChange} placeholder="Enter your email" />
+            </div>
+
+            <!-- Password -->
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" value={password} onchange={handlePasswordChange} placeholder="Enter your password" />
+            </div>
+
+            <!-- Error -->
+            <template if:true={errorMessage}>
+                <div class="error-message"> {errorMessage} </div>
+            </template>
+
+            <!-- Login Button -->
+            <div class="button-section">
+                <button onclick={handleLogin} disabled={isLoading}> {buttonLabel} </button>
+            </div>
+
+        </div>
+    </div>
+</template>
