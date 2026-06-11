@@ -173,6 +173,11 @@
     </types>
 
     <types>
+        <members>DevRec_CDMT__mdt</members>
+        <name>CustomObject</name>
+    </types>
+
+    <types>
 		<members>DRLoginWrapper_CTRL</members>
 		<members>DRLoginWrapper_CTRL_TEST</members>
 		<members>dRCustomLoginCMP_CTRL</members>
