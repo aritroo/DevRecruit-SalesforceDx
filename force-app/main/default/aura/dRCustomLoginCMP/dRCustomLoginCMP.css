@@ -1,0 +1,15 @@
+.THIS.layout {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.THIS .content {
+    width: 100%;
+    max-width: 500px;
+}
